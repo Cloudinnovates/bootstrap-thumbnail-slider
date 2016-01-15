@@ -4,8 +4,7 @@
   "description": "Simple responsive fade-in fade-out thumbnail slider with video content based on Bootstrap CSS Framework.",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npm install -g bower@latest",
-    "prestart": "bower install && npm install",
+    "prestart": "npm install && ./node_modules/bower/bin/bower install",
     "start": "node index.js"
   },
   "engines": {
@@ -23,5 +22,8 @@
   "homepage": "https://github.com/tlimpanont/bootstrap-thumbnail-slider#readme",
   "dependencies": {
     "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "bower": "^1.7.2"
   }
 }
