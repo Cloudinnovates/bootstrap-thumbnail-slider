@@ -2,13 +2,28 @@ define(['domReady!', 'threesixty'], function() {
 
     var ThumbnailSlider = function(options) {
 
+        // this is an option interface when you want to initialize this instance
         this.options = Object.assign({
             elementSelector: '.thumbnail-slider',
             showcaseItemsSelector: '.showcase .item',
             thumbnailItemsSelector: '.thumbnails .item',
-            threeSixtySelector: '.showcase .item .threesixty',
             activeSelector: 'active',
-            activeIndex: 0
+            activeIndex: 0,
+            threesixty: {
+                selector: '.showcase .item .threesixty',
+                options: {
+                    totalFrames: 50,
+                    endFrame: 50,
+                    currentFrame: 1,
+                    imgList: '.threesixty_images',
+                    progress: '.spinner',
+                    imagePath:'img/sequences/',
+                    ext: '.png',
+                    filePrefix: '',
+                    navigation: false,
+                    responsive: true
+                }
+            }
         }, options);
 
         this.element = document.querySelector(this.options.elementSelector);
@@ -29,19 +44,8 @@ define(['domReady!', 'threesixty'], function() {
 
     ThumbnailSlider.prototype.setupThreeSixty = function() {
         this.threeSixty = $(
-            this.element.querySelector(this.options.threeSixtySelector)
-        ).ThreeSixty({
-            totalFrames: 50, // Total no. of image you have for 360 slider
-            endFrame: 50, // end frame for the auto spin animation
-            currentFrame: 1, // This the start frame for auto spin
-            imgList: '.threesixty_images', // selector for image list
-            progress: '.spinner', // selector to show the loading progress
-            imagePath:'img/sequences/', // path of the image assets
-            filePrefix: '', // file prefix if any
-            ext: '.png', // extention for the assets
-            navigation: false,
-            responsive: true
-        });
+            this.element.querySelector(this.options.threesixty.selector)
+        ).ThreeSixty(this.options.threesixty.options);
     };
 
     ThumbnailSlider.prototype.setThumbnailsClickHandler = function() {
