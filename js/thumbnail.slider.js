@@ -2,32 +2,15 @@ define(['domReady!', 'threesixty'], function() {
 
     var ThumbnailSlider = function(options) {
 
-        // this is an option interface when you want to initialize this instance
         this.options = Object.assign({
             elementSelector: '.thumbnail-slider',
             showcaseItemsSelector: '.showcase .item',
             thumbnailItemsSelector: '.thumbnails .item',
             activeSelector: 'active',
-            activeIndex: 0,
-            threesixty: {
-                selector: '.showcase .item .threesixty',
-                options: {
-                    totalFrames: 50,
-                    endFrame: 50,
-                    currentFrame: 1,
-                    imgList: '.threesixty_images',
-                    progress: '.spinner',
-                    imagePath:'img/sequences/',
-                    ext: '.png',
-                    filePrefix: '',
-                    navigation: false,
-                    responsive: true
-                }
-            }
+            activeIndex: 0
         }, options);
 
         this.element = document.querySelector(this.options.elementSelector);
-        this.threeSixtyElement = this.options.threeSixtyElement;
 
         this.showcaseItems = this.nodeListToArray(
             this.element.querySelectorAll(this.options.showcaseItemsSelector)
@@ -39,13 +22,27 @@ define(['domReady!', 'threesixty'], function() {
 
         this.setThumbnailsClickHandler();
         this.setActive(this.options.activeIndex);
-        this.setupThreeSixty();
+
     } || {};
 
-    ThumbnailSlider.prototype.setupThreeSixty = function() {
-        this.threeSixty = $(
-            this.element.querySelector(this.options.threesixty.selector)
-        ).ThreeSixty(this.options.threesixty.options);
+    ThumbnailSlider.prototype.setupThreeSixty = function(options) {
+
+        options = Object.assign({
+            selector: '.showcase .item .threesixty',
+            totalFrames: 50,
+            endFrame: 50,
+            currentFrame: 1,
+            imgList: '.threesixty_images',
+            progress: '.spinner',
+            imagePath:'img/sequences/',
+            ext: '.png',
+            filePrefix: '',
+            navigation: false,
+            responsive: true
+        }, options);
+
+        this.threeSixty = $(this.element.querySelector(options.selector))
+            .ThreeSixty(options);
     };
 
     ThumbnailSlider.prototype.setThumbnailsClickHandler = function() {
