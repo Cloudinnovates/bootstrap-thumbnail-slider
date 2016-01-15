@@ -66,9 +66,11 @@ define(['domReady!', 'threesixty'], function() {
                         if(self.threeSixty) { self.threeSixty.gotoAndPlay(0); }
                         break;
                     default:
-                        self.pauseActiveYoutubeVideo();
+
                         break;
                 }
+
+                self.pauseActiveYoutubeVideo();
 
 
                 // filter out the selected item based on the list of thumbnail items
