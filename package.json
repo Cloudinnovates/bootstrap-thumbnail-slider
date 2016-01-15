@@ -4,7 +4,8 @@
   "description": "Simple responsive fade-in fade-out thumbnail slider with video content based on Bootstrap CSS Framework.",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm install && ./node_modules/bower/bin/bower install",
+    "preinstall": "npm install bower -g bower@latest",
+    "prestart": "npm install && bower install",
     "start": "node index.js"
   },
   "engines": {
