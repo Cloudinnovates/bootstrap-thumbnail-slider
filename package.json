@@ -1,0 +1,23 @@
+{
+  "name": "bootstrap-thumbnail-slider",
+  "version": "1.0.0",
+  "description": "Simple responsive fade-in fade-out thumbnail slider with video content based on Bootstrap CSS Framework.",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "bower install",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlimpanont/bootstrap-thumbnail-slider.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tlimpanont/bootstrap-thumbnail-slider/issues"
+  },
+  "homepage": "https://github.com/tlimpanont/bootstrap-thumbnail-slider#readme"
+}
