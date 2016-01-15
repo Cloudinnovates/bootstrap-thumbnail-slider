@@ -60,14 +60,16 @@ define(['domReady!', 'threesixty'], function() {
 
                 switch (dataType) {
                     case 'video':
-                        self.pauseActiveYoutubeVideo();
+
                         break;
                     case 'threesixty' :
                         if(self.threeSixty) { self.threeSixty.gotoAndPlay(0); }
                         break;
                     default:
+                        self.pauseActiveYoutubeVideo();
                         break;
                 }
+
 
                 // filter out the selected item based on the list of thumbnail items
                 if(self.thumbnailItems.indexOf(event.target)) {
