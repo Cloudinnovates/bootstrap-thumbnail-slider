@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npm install -g bower@latest",
+    "prestart": "bower install && npm install",
     "start": "node index.js"
   },
   "engines": {
@@ -20,7 +21,7 @@
     "url": "https://github.com/tlimpanont/bootstrap-thumbnail-slider/issues"
   },
   "homepage": "https://github.com/tlimpanont/bootstrap-thumbnail-slider#readme",
-  "devDependencies": {
-    "bower": "^1.7.2"
+  "dependencies": {
+    "express": "^4.13.3"
   }
 }
