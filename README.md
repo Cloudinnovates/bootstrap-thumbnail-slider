@@ -14,3 +14,6 @@ lr-http-server;
 
 ```
 With lr-http-server you can auto-watch your folder and serve your index.html
+
+
+Demo https://bootstrap-thumbnail-slider.herokuapp.com/
