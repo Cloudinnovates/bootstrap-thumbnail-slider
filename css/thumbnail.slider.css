@@ -1,0 +1,47 @@
+.thumbnail-slider .showcase .item {
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+  opacity: 0;
+  visibility: hidden; }
+  .thumbnail-slider .showcase .item.active {
+    opacity: 1;
+    visibility: visible; }
+  .thumbnail-slider .showcase .item iframe, .thumbnail-slider .showcase .item embed {
+    z-index: 2; }
+.thumbnail-slider .thumbnails {
+  padding: 0;
+  margin: 0; }
+  .thumbnail-slider .thumbnails ul, .thumbnail-slider .thumbnails li {
+    list-style-type: none; }
+  .thumbnail-slider .thumbnails .img-responsive {
+    margin: auto; }
+  .thumbnail-slider .thumbnails .item {
+    position: relative;
+    -webkit-transition: opacity 0.2s ease-in;
+    -moz-transition: opacity 0.2s ease-in;
+    -ms-transition: opacity 0.2s ease-in;
+    -o-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+    cursor: pointer;
+    opacity: 0.35;
+    padding: 0 5px 0 0;
+    margin: 5px 0 0 0; }
+    .thumbnail-slider .thumbnails .item:hover {
+      opacity: 1; }
+    .thumbnail-slider .thumbnails .item.active, .thumbnail-slider .thumbnails .item .item {
+      opacity: 1;
+      cursor: default; }
+  .thumbnail-slider .thumbnails .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+/*# sourceMappingURL=thumbnail.slider.css.map */
