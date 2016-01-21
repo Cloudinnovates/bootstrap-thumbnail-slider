@@ -1,4 +1,5 @@
 # bootstrap-thumbnail-slider
+
 Simple responsive fade-in fade-out thumbnail slider with video content based on Bootstrap CSS Framework.
 
 **I'm using RequireJS for dependency injections and Bower for dependency management.**
