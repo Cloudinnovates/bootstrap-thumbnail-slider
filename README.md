@@ -1,3 +1,5 @@
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 # bootstrap-thumbnail-slider
 
 Simple responsive fade-in fade-out thumbnail slider with video content based on Bootstrap CSS Framework.
